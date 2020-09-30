@@ -1,0 +1,20 @@
+GeneratorModel for yakindu::java {
+
+	statechart default {
+
+		feature Outlet {
+			targetProject = "fr.univcotedazur.polytech.si4.fsm.stopwatch.v0"
+			targetFolder = "src-gen"
+			libraryTargetFolder = "src"
+		}
+	
+		feature GeneralFeatures {
+			InterfaceObserverSupport = true
+			RuntimeService = true
+			TimerService = true
+			inEventQueue = true
+			synchronized = true
+			runnable = false
+		}
+	}
+}
