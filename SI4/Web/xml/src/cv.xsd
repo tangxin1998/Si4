@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element  name="cv">
+        <xs:complexType>  //??name?????????????
+            <xs:sequence>
+                <xs:element name="titre" type="xs:string"/>
+                <xs:element name="cvnom" type="xs:string"/>
+                <xs:element name="etatcivil">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nom" type="xs:string"/>  //???? ????????
+                            <xs:element name="prenom" type="xs:string"/>
+                            <xs:element name="situation" type="xs:string"/>
+                            <xs:element name="adresse" type="xs:string"/>
+                            <xs:element name="code_postal" type="xs:string"/>
+                            <xs:element name="ville" type="xs:string"/>
+                            <xs:element name="pays" type="xs:string"/>
+                            <xs:element name="telephone" type="xs:string"/>
+                            <xs:element name="email" type="xs:string"/>
+                            <xs:element name="caracteristiques">
+                                <xs:complexType>
+                                    <xs:element name="caracteristique" type="xs:string" minOccurs="1"/>
+                                    <xs:attribute name="type" type="xs:string"/>
+                                </xs:complexType>>
+
+                            </xs:element>>
+
+                        </xs:sequence>>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element  name="formations" type="xs:string" minOccurs="1">
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>

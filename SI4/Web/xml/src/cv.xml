@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cv [
+        <!ELEMENT cv (titre, cvnom, etatcivil, formations, connaissances, professionnel)>
+        <!ELEMENT titre (#PCDATA)>
+        <!ELEMENT cvnom (#PCDATA)>
+        <!ELEMENT etatcivil
+                (nom, prenom, naissance, situation, adresse?, code_postal?, ville?, pays?, telephone?, email?,caracteristiques?)>
+        <!ELEMENT caracteristiques (caracteristique+)>
+        <!ELEMENT formations (formation+)>
+        <!ELEMENT connaissances (technique*, langue*)>
+        <!ELEMENT professionnel (experience+)>
+        <!ELEMENT nom (#PCDATA)>
+        <!ELEMENT prenom (#PCDATA)>
+        <!ELEMENT naissance (#PCDATA)>
+        <!ELEMENT situation (#PCDATA)>
+        <!ELEMENT adresse (#PCDATA)>
+        <!ELEMENT code_postal (#PCDATA)>
+        <!ELEMENT ville (#PCDATA)>
+        <!ELEMENT pays (#PCDATA)>
+        <!ELEMENT telephone (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT caracteristique (#PCDATA)>
+        <!ATTLIST caracteristique
+                type CDATA #REQUIRED>
+        <!ELEMENT formation EMPTY>
+        <!ATTLIST formation
+                date-iso CDATA #REQUIRED
+                date CDATA #REQUIRED
+                datefin CDATA #IMPLIED
+                intitule CDATA #REQUIRED
+                description CDATA #IMPLIED>
+        <!ELEMENT technique EMPTY>
+        <!ATTLIST technique
+                type (0 | 1 | 2| 3 | 4 | 5) #REQUIRED
+                nom CDATA #REQUIRED
+                description CDATA #IMPLIED>
+        <!ELEMENT langue EMPTY>
+        <!ATTLIST langue
+                nom CDATA #REQUIRED
+                niveau CDATA #REQUIRED>
+        <!ELEMENT experience (missions, environnement)>
+        <!ATTLIST experience
+                date-iso CDATA #REQUIRED
+                date CDATA #REQUIRED
+                datefin CDATA #IMPLIED
+                client CDATA #IMPLIED
+                entreprise CDATA #REQUIRED
+                fonction CDATA #REQUIRED>
+        <!ELEMENT missions (mission+)>
+        <!ELEMENT environnement (technique+)>
+        <!ELEMENT mission (#PCDATA)>
+        <!ELEMENT personnel (activite*)>
+        <!ELEMENT activite (#PCDATA)>
+        <!ATTLIST activite
+                type CDATA #REQUIRED
+                nom CDATA #REQUIRED
+                description CDATA #IMPLIED>
+        ]>
+<cv>
+    <titre>Mon CV</titre>
+    <cvnom>Xin Tang</cvnom>
+    <etatcivil>
+        <nom>Tang</nom>
+        <prenom>Xin</prenom>
+        <naissance>1998/05/20</naissance>
+        <situation>etudiant</situation>
+        <adresse>Polytech-nice-sophia</adresse>
+        <code_postal>o66oo</code_postal>
+        <ville>Biot</ville>
+        <pays>France</pays>
+        <telephone>0623011237</telephone>
+        <email>xinlinforever@gmail.com</email>
+        <caracteristiques>
+            <caracteristique type="timid">totalement</caracteristique>
+        </caracteristiques>
+    </etatcivil>
+    <formations>
+        <formation date-iso="2019/09/01"
+        date="3 years"
+        datefin="2022/08/31"
+        intitule="engineer of computer Science"
+        description="Il faut travailler dur!" />
+    </formations>
+    <connaissances>
+        <technique type="3"
+        nom="JAVA"
+        description="Je peut utiliser JAVA pour effectuer la conception de la page"/>
+        <langue nom="Chinois"
+        niveau="langue maternelle"/>
+    </connaissances>
+    <professionnel>
+        <experience date-iso="2019/09/01"
+        date="3 month"
+        entreprise="Tencent"
+        fonction="familier avec les affaires de l'entreprise">
+            <missions>
+                <mission>Communiquer avec les developpeurs et les clients</mission>
+            </missions>
+            <environnement>
+                <technique type ="4"
+                nom="communication"/>
+            </environnement>
+        </experience>
+    </professionnel>
+</cv>

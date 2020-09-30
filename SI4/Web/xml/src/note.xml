@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<!DOCTYPE information SYSTEM "note.dtd">
+
+
+
+<information>
+    <Student id1="01">
+        <name>WANGtONG</name>
+        <course>java</course>
+        <grade>89</grade>
+    </Student>
+    <Student id1="02">
+        <name>LiJia</name>
+        <course>sql</course>
+        <grade>58</grade>
+    </Student>
+</information>

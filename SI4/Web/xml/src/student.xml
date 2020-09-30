@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE point [
+        <!ELEMENT point (student+)> <!--申明中包含根元素-->
+        <!ELEMENT student (name,course,grade)>
+        <!ATTLIST student id CDATA #IMPLIED>  <!--required属性必须添加， implied 属性非必须-->
+        <!ELEMENT name (finally)>
+        <!ELEMENT finally (#PCDATA)><!--最终内化标签必须进行文本约束-->
+        <!ELEMENT course (#PCDATA)>
+        <!ELEMENT grade EMPTY>
+
+        ]>
+<point><!--根元素-->
+    <student id="520">
+        <name>
+            <finally>
+                xiaoHong
+            </finally>
+        </name>
+        <course>java</course>
+        <grade/>  <!--空元素的使用 -->
+    </student>
+    <student id="521">
+        <name>
+        <finally>
+            xiaoHong
+        </finally>
+            </name>
+        <course>java</course>
+        <grade/>
+    </student>
+
+</point>

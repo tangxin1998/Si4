@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!ELEMENT information (Student+)>
+        <!ELEMENT Student (name,course,grade)>
+        <!ATTLIST Student id1 CDATA #IMPLIED>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT course (#PCDATA)>
+        <!ELEMENT grade (#PCDATA)>
